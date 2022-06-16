@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calc</string>
+    <string name="enter_second_number">Enter second number</string>
+    <string name="_1">1</string>
+    <string name="_2">1</string>
+    <string name="enter_first_number">Enter first number</string>
+    <string name="textview">TextView</string>
+    <string name="divison">/</string>
+    <string name="modulus">%</string>
+    <string name="subtraction">-</string>
+    <string name="Addition">+</string>
+</resources>
