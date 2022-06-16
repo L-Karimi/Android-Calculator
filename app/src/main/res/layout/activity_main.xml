@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="88dp"
         android:text="@string/Addition"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -30,7 +30,7 @@
         android:id="@+id/btnSubtract"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="32dp"
         android:text="@string/subtraction"
         android:textAlignment="center"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="88dp"
         android:text="@string/modulus"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -56,7 +56,7 @@
         android:id="@+id/btnDivision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="32dp"
         android:text="@string/divison"
         android:textAlignment="center"
@@ -87,49 +87,68 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:hint="result"
-        android:textAlignment="center"
+        android:hint="@string/result"
+        android:textColorHint="#757575"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilFirstnum"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="40dp"
-        android:background="@android:color/transparent"
-        android:hint="@string/enter_first_number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilSecondnum"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="40dp"
         android:background="@android:color/transparent"
-        android:hint="@string/enter_second_number"
+        android:hint="@string/enter_first_number"
+        app:layout_constraintBottom_toTopOf="@+id/tilFirstnum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilFirstnum">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+            android:id="@+id/tieSecondnum"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
             android:background="@android:color/transparent"
-            />
+            android:minHeight="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFirstnum"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/enter_second_number"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieFirstnum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@android:color/transparent"
+            android:minHeight="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
