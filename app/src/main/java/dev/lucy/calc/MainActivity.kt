@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var tilFirstnum: TextInputLayout
     lateinit var tilSecondnum: TextInputLayout
 
+    @RequiresApi(Build.VERSION_CODES.Q)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-
                 add(number1.toInt(), number2.toInt())
             }
         }
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             val number1 = tilFirstnum.editText.toString()
             val number2 = tilSecondnum.editText.toString()
             if (number1.isBlank()) {
+
                 return@setOnClickListener
             } else if (number2.isBlank()) {
                 return@setOnClickListener
@@ -84,24 +86,28 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun add(number1: Int, number2: Int) {
+    fun add(number1: Int, number2: Int): Int {
         val result = number1 + number2
         tvResults.text = result.toString()
+        return result
     }
 
-    fun subtract(number1: Int, number2: Int) {
+    fun subtract(number1: Int, number2: Int): Int {
         val result = number1 - number2
         tvResults.text = result.toString()
+        return result
     }
 
-    fun modulus(number1: Int, number2: Int) {
+    fun modulus(number1: Int, number2: Int): Int {
         val result = number1 % number2
         tvResults.text = result.toString()
+        return result
     }
 
-    fun division(number1: Int, number2: Int) {
+    fun division(number1: Int, number2: Int): Int {
         val result = number1 / number2
         tvResults.text = result.toString()
+        return result
     }
 
 }
